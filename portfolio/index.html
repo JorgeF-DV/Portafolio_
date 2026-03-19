@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Jorge Luis Flórez González — Support Analyst & Aspiring Backend Developer" />
+    <title>Jorge Luis Flórez — Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+
+  <body>
+    <!-- ─── CURSOR ─────────────────────────────────────────────── -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- ─── NAV ──────────────────────────────────────────────────── -->
+    <nav class="nav" id="nav">
+      <a class="nav__logo" href="#hero">JLFG<span class="accent">.</span></a>
+      <ul class="nav__links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Educación</a></li>
+        <li><a href="#contact" class="nav__cta">Contacto</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ─── MOBILE MENU ───────────────────────────────────────────── -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mobile-link">Sobre mí</a></li>
+        <li><a href="#experience" class="mobile-link">Experiencia</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#education" class="mobile-link">Educación</a></li>
+        <li><a href="#contact" class="mobile-link">Contacto</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- ─── HERO ─────────────────────────────────────────────────── -->
+      <section class="hero" id="hero">
+        <div class="hero__grid-bg"></div>
+        <div class="hero__content">
+          <div class="hero__tag reveal">
+            <span class="dot"></span> Disponible para oportunidades
+          </div>
+          <h1 class="hero__name reveal">
+            Jorge Luis<br /><span class="outline-text">Flórez González</span>
+          </h1>
+          <p class="hero__role reveal">
+            Support Analyst
+            <span class="accent">@</span> Auco.ai
+            <span class="separator">·</span>
+            Aspiring Backend Developer
+          </p>
+          <p class="hero__description reveal">
+            Profesional en Gestión Operativa &amp; Experiencia del Cliente con
+            +3 años en entornos tecnológicos. Apasionado por analizar,
+            optimizar y automatizar procesos para elevar la eficiencia.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#contact" class="btn btn--primary">Hablemos</a>
+            <a
+              href="https://www.linkedin.com/in/jorgeluisflorezgo"
+              target="_blank"
+              rel="noopener"
+              class="btn btn--ghost"
+            >LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="hero__photo reveal">
+          <div class="hero__photo-wrapper">
+            <img src="assets/profile.png" alt="Jorge Luis Flórez González" />
+            <div class="hero__photo-ring"></div>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__number" data-target="3">0</span>
+              <span class="stat__label">Años de experiencia</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number" data-target="90">0</span>
+              <span class="stat__label">% CSAT mantenido</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number" data-target="4">0</span>
+              <span class="stat__label">Empresas</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__scroll-indicator">
+          <span>Scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-number">01</span>
+            <h2>Sobre mí</h2>
+          </div>
+          <div class="about__grid">
+            <div class="about__text reveal">
+              <p>
+                Soy un profesional enfocado en la intersección entre
+                <strong>tecnología</strong> y <strong>experiencia del cliente</strong>.
+                Actualmente trabajo como Support Analyst en Auco.ai donde actúo
+                como puente entre usuarios y equipos de ingeniería.
+              </p>
+              <p>
+                Mi camino me ha llevado desde el servicio al cliente hasta
+                la gestión de proyectos y el análisis de datos, siempre con
+                el objetivo de <strong>automatizar</strong> lo que se puede
+                automatizar y <strong>optimizar</strong> lo que no.
+              </p>
+              <p>
+                Hoy estudio Ingeniería de Sistemas en la Institución
+                Universitaria Pascual Bravo, con la mira puesta en convertirme
+                en <strong>Backend Developer</strong>.
+              </p>
+            </div>
+            <div class="about__highlights reveal">
+              <div class="highlight-card">
+                <span class="highlight-card__icon">🔍</span>
+                <h3>Análisis</h3>
+                <p>Diagnóstico de APIs, logs y errores 4xx/5xx para escalamiento efectivo.</p>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-card__icon">⚙️</span>
+                <h3>Automatización</h3>
+                <p>Diseño de chatbots, scripts y flujos que reducen trabajo manual.</p>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-card__icon">📊</span>
+                <h3>Data-Driven</h3>
+                <p>Decisiones basadas en KPIs, ROI, CPA y datos reales de campaña.</p>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-card__icon">🤝</span>
+                <h3>Comunicación</h3>
+                <p>Traducción de requerimientos de negocio a specs técnicas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── EXPERIENCE ───────────────────────────────────────────── -->
+      <section class="section experience" id="experience">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-number">02</span>
+            <h2>Experiencia</h2>
+          </div>
+          <div class="timeline">
+
+            <div class="timeline__item reveal" data-index="0">
+              <div class="timeline__line"></div>
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <div class="timeline__meta">
+                  <span class="timeline__date">Ene 2026 — Presente</span>
+                  <span class="timeline__badge current">Actual</span>
+                </div>
+                <h3 class="timeline__title">Support Analyst</h3>
+                <span class="timeline__company">Auco.ai · Medellín</span>
+                <ul class="timeline__list">
+                  <li>Soporte técnico de 1er y 2do nivel garantizando continuidad operativa.</li>
+                  <li>Diagnóstico de integraciones API, validando errores 4xx/5xx con análisis de logs.</li>
+                  <li>Enlace clave entre usuarios finales y el equipo de Ingeniería.</li>
+                  <li>Gestión de Feature Requests hacia el equipo de Producto.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal" data-index="1">
+              <div class="timeline__line"></div>
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <div class="timeline__meta">
+                  <span class="timeline__date">Ene 2025 — Nov 2025</span>
+                </div>
+                <h3 class="timeline__title">Project Manager</h3>
+                <span class="timeline__company">Funnelhot · Medellín</span>
+                <ul class="timeline__list">
+                  <li>Lideré proyectos tecnológicos con entregas anticipadas y reducción de costos.</li>
+                  <li>Coordiné equipos en entornos Scrum/Kanban con Trello, Jira y MS Project.</li>
+                  <li>Supervisé ciclo de vida completo aplicando PMBOK y metodologías ágiles.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal" data-index="2">
+              <div class="timeline__line"></div>
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <div class="timeline__meta">
+                  <span class="timeline__date">Feb 2024 — Abr 2025</span>
+                </div>
+                <h3 class="timeline__title">Analista de Datos</h3>
+                <span class="timeline__company">Autónomo</span>
+                <ul class="timeline__list">
+                  <li>⬆ +7% en ventas de @Sofpyme en el primer mes de campaña digital.</li>
+                  <li>Análisis de Google Ads y Meta Ads para identificar patrones de consumidor.</li>
+                  <li>Optimización de ROI, CPA y CTR con generación de reportes visuales.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal" data-index="3">
+              <div class="timeline__line"></div>
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <div class="timeline__meta">
+                  <span class="timeline__date">Sep 2023 — Feb 2024</span>
+                </div>
+                <h3 class="timeline__title">Analista de Soporte al Cliente</h3>
+                <span class="timeline__company">Mobilia Software Business</span>
+                <ul class="timeline__list">
+                  <li>Creación de instructivos que redujeron tiempos de respuesta significativamente.</li>
+                  <li>Resolución de errores funcionales mediante análisis y manipulación de SQL.</li>
+                  <li>Colaboración en hotfixes y fixes con el equipo de desarrollo.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal" data-index="4">
+              <div class="timeline__line"></div>
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <div class="timeline__meta">
+                  <span class="timeline__date">Jul 2022 — Jul 2023</span>
+                </div>
+                <h3 class="timeline__title">Auxiliar de Atención y Vinculación</h3>
+                <span class="timeline__company">Wompi · Remoto</span>
+                <ul class="timeline__list">
+                  <li>⭐ CSAT &gt; 90% mantenido por más de 9 meses consecutivos.</li>
+                  <li>Soporte técnico en integraciones web: API, Widget, Web CheckOut, Plugins.</li>
+                  <li>Generación de informes mensuales con consultas SQL especializadas.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item reveal" data-index="5">
+              <div class="timeline__line"></div>
+              <div class="timeline__dot"></div>
+              <div class="timeline__card">
+                <div class="timeline__meta">
+                  <span class="timeline__date">Jul 2021 — Jul 2022</span>
+                </div>
+                <h3 class="timeline__title">Analista de Servicio al Cliente</h3>
+                <span class="timeline__company">Wakypet · Remoto</span>
+                <ul class="timeline__list">
+                  <li>🤖 Diseñé chatbot con Google Dialogflow + CRM OkeyBot, automatizando respuestas.</li>
+                  <li>⬆ +10% en ventas mensuales durante los primeros 6 meses.</li>
+                  <li>Colaboré en diseño de UX de la plataforma y estrategias de comunicación.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── SKILLS ─────────────────────────────────────────────────── -->
+      <section class="section skills" id="skills">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-number">03</span>
+            <h2>Skills</h2>
+          </div>
+          <div class="skills__grid">
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title">Backend &amp; Datos</h3>
+              <div class="skill-tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Análisis de Logs</span>
+                <span class="tag">Errores HTTP</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title">Gestión de Proyectos</h3>
+              <div class="skill-tags">
+                <span class="tag">Scrum</span>
+                <span class="tag">Kanban</span>
+                <span class="tag">PMBOK</span>
+                <span class="tag">Jira</span>
+                <span class="tag">Trello</span>
+                <span class="tag">MS Project</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title">Marketing &amp; Analytics</h3>
+              <div class="skill-tags">
+                <span class="tag">Google Ads</span>
+                <span class="tag">Meta Ads</span>
+                <span class="tag">ROI / CPA / CTR</span>
+                <span class="tag">KPIs</span>
+                <span class="tag">Data Analysis</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title">Herramientas &amp; IA</h3>
+              <div class="skill-tags">
+                <span class="tag">ChatGPT</span>
+                <span class="tag">DALL-E</span>
+                <span class="tag">Hugging Face</span>
+                <span class="tag">Google Dialogflow</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title">Soft Skills</h3>
+              <div class="skill-tags">
+                <span class="tag">Comunicación técnica</span>
+                <span class="tag">Resolución de problemas</span>
+                <span class="tag">Pensamiento analítico</span>
+                <span class="tag">Orientación al cliente</span>
+                <span class="tag">Mejora continua</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── EDUCATION ─────────────────────────────────────────────── -->
+      <section class="section education" id="education">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-number">04</span>
+            <h2>Educación</h2>
+          </div>
+          <div class="edu__grid">
+            <div class="edu__card reveal">
+              <div class="edu__card-header">
+                <span class="edu__icon">🎓</span>
+                <div>
+                  <h3>Ingeniería en Sistemas</h3>
+                  <span class="edu__school">Inst. Universitaria Pascual Bravo</span>
+                </div>
+              </div>
+              <p class="edu__period">Ene 2024 — Ene 2027</p>
+              <p class="edu__note">Enfocado en Ingeniería de Software. Aspirando a Backend Development.</p>
+            </div>
+            <div class="edu__card reveal">
+              <div class="edu__card-header">
+                <span class="edu__icon">📚</span>
+                <div>
+                  <h3>Tecnología en Contabilidad y Finanzas</h3>
+                  <span class="edu__school">SENA</span>
+                </div>
+              </div>
+              <p class="edu__period">Jul 2018 — Jul 2020</p>
+              <p class="edu__note">Base sólida en finanzas que complementa el análisis de negocio.</p>
+            </div>
+          </div>
+
+          <div class="certifications reveal">
+            <h3>Certificaciones</h3>
+            <div class="cert__list">
+              <div class="cert__item">
+                <span class="cert__dot"></span>
+                Curso de Inteligencia Artificial: ChatGPT, DALL-E y Hugging Face
+              </div>
+              <div class="cert__item">
+                <span class="cert__dot"></span>
+                Curso de Fundamentos de Python
+              </div>
+              <div class="cert__item">
+                <span class="cert__dot"></span>
+                Aspectos básicos: Datos, datos, en todas partes — Google
+              </div>
+              <div class="cert__item">
+                <span class="cert__dot"></span>
+                Formula preguntas para tomar decisiones basadas en datos — Google
+              </div>
+              <div class="cert__item">
+                <span class="cert__dot"></span>
+                Curso de Closures y Scope en JavaScript
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CONTACT ──────────────────────────────────────────────── -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-number">05</span>
+            <h2>Contacto</h2>
+          </div>
+          <div class="contact__wrapper reveal">
+            <p class="contact__headline">
+              ¿Tienes un proyecto o una oportunidad?<br />
+              <span class="accent">Hablemos.</span>
+            </p>
+            <div class="contact__links">
+              <a href="mailto:jorgeluisflorezgonzalez@gmail.com" class="contact__link">
+                <span class="contact__link-icon">✉</span>
+                jorgeluisflorezgonzalez@gmail.com
+              </a>
+              <a href="tel:+53243382755" class="contact__link">
+                <span class="contact__link-icon">☎</span>
+                +57 3243382755
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jorgeluisflorezgo"
+                target="_blank"
+                rel="noopener"
+                class="contact__link"
+              >
+                <span class="contact__link-icon">in</span>
+                linkedin.com/in/jorgeluisflorezgo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ─── FOOTER ───────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Diseñado &amp; desarrollado con ♥ —
+          <span class="mono">Jorge Luis Flórez González</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ─── SCRIPTS ──────────────────────────────────────────────── -->
+    <script src="js/cursor.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/counters.js"></script>
+  </body>
+</html>

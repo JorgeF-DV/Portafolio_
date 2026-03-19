@@ -1,0 +1,107 @@
+/* ================================================================
+   animations.css — Keyframes & Reveal Animations
+   ================================================================ */
+
+/* ─────────────────────────────────────────────────────────────
+   KEYFRAMES
+───────────────────────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes scrollLine {
+  0%   { transform: scaleX(0); transform-origin: left; }
+  50%  { transform: scaleX(1); transform-origin: left; }
+  51%  { transform: scaleX(1); transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 200, 255, 0.1); }
+  50%       { box-shadow: 0 0 40px rgba(99, 200, 255, 0.25); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   REVEAL — Initial (hidden) state
+───────────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity   0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Visible state (added by JS IntersectionObserver) */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children delay */
+.reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal:nth-child(4) { transition-delay: 240ms; }
+.reveal:nth-child(5) { transition-delay: 320ms; }
+.reveal:nth-child(6) { transition-delay: 400ms; }
+
+/* Timeline items — stagger via data-index */
+.timeline__item[data-index="0"] .reveal { transition-delay: 0ms; }
+.timeline__item[data-index="1"] .reveal { transition-delay: 80ms; }
+.timeline__item[data-index="2"] .reveal { transition-delay: 160ms; }
+.timeline__item[data-index="3"] .reveal { transition-delay: 240ms; }
+.timeline__item[data-index="4"] .reveal { transition-delay: 320ms; }
+.timeline__item[data-index="5"] .reveal { transition-delay: 400ms; }
+
+/* ─────────────────────────────────────────────────────────────
+   HOVER GLOW on photo
+───────────────────────────────────────────────────────────── */
+.hero__photo-wrapper:hover img {
+  filter: grayscale(0%) contrast(1.1);
+  transition: filter 0.4s ease;
+}
+
+.hero__photo-wrapper {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Page load animation for hero text (no JS needed)
+───────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__content .reveal:nth-child(1) { animation: fadeInUp 0.7s 0.1s both; }
+  .hero__content .reveal:nth-child(2) { animation: fadeInUp 0.7s 0.25s both; }
+  .hero__content .reveal:nth-child(3) { animation: fadeInUp 0.7s 0.4s both; }
+  .hero__content .reveal:nth-child(4) { animation: fadeInUp 0.7s 0.55s both; }
+  .hero__content .reveal:nth-child(5) { animation: fadeInUp 0.7s 0.7s both; }
+  .hero__photo.reveal               { animation: fadeInLeft 0.9s 0.3s both; }
+}

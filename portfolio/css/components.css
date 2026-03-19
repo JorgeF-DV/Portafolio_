@@ -1,0 +1,195 @@
+/* ================================================================
+   components.css — Reusable UI Components
+   ================================================================ */
+
+/* ─────────────────────────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition:
+    background   var(--transition-base),
+    color        var(--transition-base),
+    border-color var(--transition-base),
+    transform    var(--transition-fast),
+    box-shadow   var(--transition-base);
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn--primary {
+  background: var(--clr-accent);
+  color: var(--clr-bg);
+}
+
+.btn--primary:hover {
+  background: #8dd9ff;
+  box-shadow: 0 8px 24px rgba(99, 200, 255, 0.3);
+}
+
+.btn--ghost {
+  border: 1px solid var(--clr-border);
+  color: var(--clr-muted);
+}
+
+.btn--ghost:hover {
+  border-color: rgba(99, 200, 255, 0.4);
+  color: var(--clr-text);
+  background: var(--clr-accent-dim);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   HIGHLIGHT CARDS (about section)
+───────────────────────────────────────────────────────────── */
+.highlight-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition:
+    border-color var(--transition-base),
+    box-shadow   var(--transition-base),
+    transform    var(--transition-base);
+}
+
+.highlight-card:hover {
+  border-color: rgba(99, 200, 255, 0.3);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.highlight-card__icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.highlight-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.highlight-card p {
+  font-size: 0.85rem;
+  color: var(--clr-muted);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TIMELINE CARD
+───────────────────────────────────────────────────────────── */
+.timeline__card {
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition:
+    border-color var(--transition-base),
+    box-shadow   var(--transition-base);
+}
+
+.timeline__card:hover {
+  border-color: rgba(99, 200, 255, 0.25);
+  box-shadow: var(--shadow-card);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAGS
+───────────────────────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 99px;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-muted);
+  transition:
+    background    var(--transition-fast),
+    border-color  var(--transition-fast),
+    color         var(--transition-fast);
+}
+
+.tag:hover {
+  background: var(--clr-accent-dim);
+  border-color: rgba(99, 200, 255, 0.3);
+  color: var(--clr-accent);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   EDUCATION CARD
+───────────────────────────────────────────────────────────── */
+.edu__card {
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition:
+    border-color var(--transition-base),
+    box-shadow   var(--transition-base);
+}
+
+.edu__card:hover {
+  border-color: rgba(99, 200, 255, 0.25);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CUSTOM CURSOR
+───────────────────────────────────────────────────────────── */
+.cursor,
+.cursor-trail {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity var(--transition-fast);
+  mix-blend-mode: screen;
+}
+
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: var(--clr-accent);
+  transform: translate(-50%, -50%);
+}
+
+.cursor-trail {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(99, 200, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: left 0.12s ease, top 0.12s ease, opacity var(--transition-fast);
+}
+
+body:has(a:hover) .cursor-trail,
+body:has(button:hover) .cursor-trail {
+  transform: translate(-50%, -50%) scale(1.5);
+  border-color: var(--clr-accent);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SKILL GROUP CARD WRAPPER
+───────────────────────────────────────────────────────────── */
+.skill-group {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: border-color var(--transition-base);
+}
+
+.skill-group:hover {
+  border-color: rgba(99, 200, 255, 0.25);
+}

@@ -1,0 +1,42 @@
+/* ================================================================
+   variables.css — Design Tokens
+   ================================================================ */
+
+:root {
+  /* ── Colors ── */
+  --clr-bg:         #080c10;
+  --clr-surface:    #0d1117;
+  --clr-surface-2:  #141b24;
+  --clr-border:     rgba(99, 200, 255, 0.10);
+  --clr-accent:     #63c8ff;
+  --clr-accent-dim: rgba(99, 200, 255, 0.15);
+  --clr-text:       #e8f0f8;
+  --clr-muted:      #6b7f94;
+  --clr-white:      #ffffff;
+
+  /* ── Typography ── */
+  --font-display: "Syne", sans-serif;
+  --font-mono:    "JetBrains Mono", monospace;
+
+  /* ── Spacing scale ── */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  4rem;
+  --space-2xl: 8rem;
+
+  /* ── Border radius ── */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 600ms ease;
+
+  /* ── Shadows ── */
+  --shadow-glow: 0 0 40px rgba(99, 200, 255, 0.12);
+  --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.5);
+}
